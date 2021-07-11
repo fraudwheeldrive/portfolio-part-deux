@@ -1,8 +1,9 @@
 import React, {useState} from 'react';
 import Header from './components/Header';
 import About from './components/About';
-import ContactMe from './components/ContactMe';
 import Portfolio from './components/Portfolio';
+import ContactMe from './components/ContactMe';
+
 
 
 function App() {
@@ -51,8 +52,9 @@ return (
     <main>
       <Portfolio></Portfolio>
       <About></About>
+      <ContactMe></ContactMe>
     </main>
-    <ContactMe></ContactMe>
+    
   </div>
 );
 
