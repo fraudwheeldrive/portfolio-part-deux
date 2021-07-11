@@ -1,12 +1,23 @@
 import React from 'react';
 
-function Header() {
+function Header(props) {
+  const{
+    projects= [],
+    setPortfolioItem,
+    portfolioItem, 
+  }= props;
+
+
+  
 
   return (
-    <header>
+    <header className="flex-row px-1">
     <h2>
-      <a href="/">
-        <span role="img" aria-label="race car"> 🏎️</span> Portfolio Part Deux!
+      <a data-testod= "link" href= "/">
+        <span role="img" aria-label="race car"> 
+        {" "}
+        🏎️</span>
+         Portfolio Part Deux!
       </a>
     </h2>
     <nav>
@@ -18,10 +29,26 @@ function Header() {
           </a>
         </li>
         <li className="mx2">
-          <span>Resume</span>
+          <span> Resume </span>
         </li>
-      <li className ="mx-2">Portfolio</li>
-      <li className ="mx-2">Contact</li> 
+        {projects.map((project) => (
+          <li 
+          className = {`mx-2 ${ portfolioItem.name === project.name && "navActive"}`}
+          key={project.name}
+     >
+       <span
+       onClick={() => {
+         setPortfolioItem(project)
+       }}
+       >
+         {project.name}
+       </span>
+        </li>
+        ))}
+
+<li className="mx2">
+          <span> Contact </span>
+        </li>
       </ul>
     </nav>
   </header>

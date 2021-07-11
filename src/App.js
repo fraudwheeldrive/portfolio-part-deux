@@ -1,18 +1,60 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from './components/Header';
 import About from './components/About';
-import ContactMe from './components/Contact';
+import ContactMe from './components/ContactMe';
+import Portfolio from './components/Portfolio';
+
 
 function App() {
-  return (
-    <div>
-      <Header></Header>
-      <main>
-        <ContactMe></ContactMe>
-        <About></About>
-      </main>
-    </div>
-  );
-}
 
+
+  const [projects] = useState([
+    {
+        name: "HTML and CSS",
+        description:
+        "projects whose main focus was HTML and CSS",
+      },
+    {
+      name: "Frontend Javascript",
+        description:
+        "projects whose main focus was Javascript",
+    },
+    {
+      name: "Backend Javascript",
+        description:
+        "projects whose main focus was backend development using javascript",
+    },
+    {
+      name: "MERN Stack ",
+      description:
+    " projects whose main focus was the MERN Stack",
+    },
+    { 
+    name: "Group Projects",
+    description:
+    "Cumulative projects incorporating multiple programming languages and theories ",
+    },
+      
+  
+    ]);
+  
+    const [portfolioItem, setPortfolioItem] = useState(projects[0]);
+
+
+return (
+  <div>
+    <Header
+    projects={projects}
+    setPortfolioItem ={setPortfolioItem}
+    portfolioItem={portfolioItem}
+    ></Header>
+    <main>
+      <Portfolio></Portfolio>
+      <About></About>
+    </main>
+    <ContactMe></ContactMe>
+  </div>
+);
+
+}
 export default App;
