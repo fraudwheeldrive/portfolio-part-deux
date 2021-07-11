@@ -3,7 +3,6 @@ import backgroundImg from "../../assets/images/Rollingshot.jpg";
 
 function About() {
     return (
-     
   <section className="my 5">
     <h1 id="about">About Myself</h1>
     <img src={backgroundImg} className="my-2" style={{ width: "100%" }} alt="background"/>

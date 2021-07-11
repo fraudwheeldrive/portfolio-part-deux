@@ -1,20 +1,21 @@
 import React from "react";
 import photo from "../../assets/images/run-buddy.PNG"
 
-function Portfolio (props) {
+function Portfolio ({portfolioitem}) {
 
-    const portfolioItem ={
-        name: "HTML and CSS",
-        description:
-        "projects whose main focus was HTML and CSS",
-     
-    };
+
+    const { name, description, photo } = portfolioitem;
+
+    // const portfolioItem ={
+    //     name: "HTML and CSS",
+    //     description:"projects whose main focus was HTML and CSS"        
+    // };
 
 
     return (
-        <section>
-            <h1>{portfolioItem.name}</h1>
-            <p>{portfolioItem.description}</p>
+        <section key= {name}>
+            <h1>{name}</h1>
+            <p>{description}</p>
             <div>
                 <img src={photo} alt= " run buddy app, first HTML assignment"
                 className="img-thumbnail mx 1"/>
