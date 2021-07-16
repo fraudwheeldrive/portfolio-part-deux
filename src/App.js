@@ -9,13 +9,16 @@ import './App.css';
 function App() {
 
 
+
   return (
   <div>
     <Header></Header>
-<About></About>
+    <main>
 <ContactMe></ContactMe>
 <Projects></Projects> 
  <Resume></Resume>
+ <About></About>
+ </main>
   </div>
 
     

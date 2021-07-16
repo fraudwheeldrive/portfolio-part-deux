@@ -1,64 +1,63 @@
-import React from 'react';
-
+import React, { useState } from "react";
 
 // need buttons for About, Projects, Contact and resume in header
 
-
-
-const navBar = [
-  {
-    name: "portfolio",
-    description: "portfolio of my projects",
-  },
-  {
-    name: "resume",
-    description: "link to my resume and linkedIn",
-  },
-]
-
 function Header() {
-
-  function pageSelected(name) {
-    console.log(`${name} clicked`)
-  }
   
+  const [categories] = useState([
+    {
+      name: "portfolio",
+      description: "portfolio of my projects",
+    },
+    {
+      name: "resume",
+      description: "link to my resume and linkedIn",
+    },
+  ]);
 
+  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+
+  // function pageSelected(name) {
+  //   console.log(`${name} clicked`)
+  // }
 
   return (
-    
-  <header>
-    <h2>
-    <a href ="/">
-      <span role="img" aria-label="racecar">🚘</span> Portfolio Part Deux
-    </a>
-    </h2>
+    <header className="flex-row px -1">
+      <h2>
+        <a data-testid="link" href="/">
+          <span role="img" aria-label="racecar">
+            {" "}
+            🚘
+          </span>{" "}
+          Portfolio Part Deux
+        </a>
+      </h2>
 
-    <nav>
-      <ul className="flex-row">
-        <li className="mx=2">
-          <a href="#about">
-            About Me
-          </a>
-        </li>
-        <li>
-          <span>Contact</span>
-        </li>
-        {navBar.map((sitePage)=> (
-          <li
-          className="mx-1"
-          key={sitePage.name}
-          >
-            <span onClick={() => pageSelected(sitePage.name)} >
-            {sitePage.name}
-                          </span>
+      <nav>
+        <ul className="flex-row">
+          <li className="mx=2">
+            <a href="#about">About Me</a>
           </li>
-        ))}
-      </ul>
-    </nav>
-  </header>
-  
-
-    
+          <li>
+            <span>Contact</span>
+          </li>
+          {categories.map((category) => (
+            <li
+              className={`mx-1${
+                currentCategory.name === category.name && "navActive"
+              }`}
+              key={category.name}
+            >
+              <span
+                onClick={() => {
+                  setCurrentCategory(category);
+                }}
+              ></span>
+            </li>
+          ))}
+        </ul>
+      </nav>
+    </header>
   );
 }
 
