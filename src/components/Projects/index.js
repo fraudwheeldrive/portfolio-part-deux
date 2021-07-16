@@ -6,11 +6,10 @@ function Projects() {
 
 
     return (
-    <div>
-     <h4>Projects</h4> 
-    </div>
-  
-      
+ <section>
+   <h1>TITLE</h1>
+   <p>DETAILS</p>
+ </section>
     );
   }
   
