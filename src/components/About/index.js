@@ -4,11 +4,12 @@ import samCat from '../../assets/images/sam.jpg'
 
 function About() {
   return (
-  <div>
-   <h2>about</h2> 
+
+  <section>
+   <h2 id="about">About Me</h2> 
    <img src={samCat} alt= "a cat named sam" ></img>
    <p> Stuff about me </p>
-  </div>
+  </section>
 
     
   );
