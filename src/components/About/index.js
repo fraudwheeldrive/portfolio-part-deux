@@ -1,5 +1,5 @@
 import React from 'react';
-import samCat from '../../assets/images/sam.jpg'
+import samCat from '../../assets/samcat/sam.jpg'
 
 
 function About() {

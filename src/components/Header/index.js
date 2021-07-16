@@ -1,45 +1,41 @@
-import React, { useState } from "react";
+import React from "react";
 
 // need buttons for About, Projects, Contact and resume in header
 
-function Header() {
+function Header(props) {
+  const {
+    categories = [],
+    setCurrentCategory,
+    currentCategory,
+  } = props;
   
-  const [categories] = useState([
-    {
-      name: "portfolio",
-      description: "portfolio of my projects",
-    },
-    {
-      name: "resume",
-      description: "link to my resume and linkedIn",
-    },
-  ]);
 
-  const [currentCategory, setCurrentCategory] = useState(categories[0]);
+  const handleClick = (item) => {
+    console.log(item);
+    return item;
+  };
 
-  // function pageSelected(name) {
-  //   console.log(`${name} clicked`)
-  // }
+
 
   return (
     <header className="flex-row px -1">
       <h2>
         <a data-testid="link" href="/">
           <span role="img" aria-label="racecar">
-            {" "}
             🚘
-          </span>{" "}
+          </span>
           Portfolio Part Deux
         </a>
       </h2>
-
       <nav>
         <ul className="flex-row">
           <li className="mx=2">
-            <a href="#about">About Me</a>
+            <a data-testid ="#about" href="#about">
+              About Me
+              </a>
           </li>
-          <li>
-            <span>Contact</span>
+            <li className={"mx-2"}>
+            <span onClick={() => handleClick('Contact')}>Contact</span>
           </li>
           {categories.map((category) => (
             <li

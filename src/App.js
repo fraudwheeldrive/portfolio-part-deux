@@ -1,23 +1,39 @@
-import React from 'react';
-import About from './components/About'
-import ContactMe from './components/ContactMe'
+import React, { useState } from 'react';
 import Header from './components/Header'
-import Projects from './components/Projects'
+import About from './components/About'
+import ProjectsGallery from './components/ProjectsGallery'
+import ContactMe from './components/ContactMe'
 import Resume from './components/Resume'
 import './App.css';
 
 function App() {
+  const [categories] = useState([
+    {
+      name: "portfolio",
+      description: "portfolio of my projects",
+    },
+    {
+      name: "resume",
+      description: "link to my resume and linkedIn",
+    },
+  ]);
 
+  
+  const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
 
   return (
   <div>
-    <Header></Header>
+    <Header
+    categories={categories}
+    setCurrentCategory={setCurrentCategory}
+    currentCategory={currentCategory}>
+    </Header>
     <main>
+    <ProjectsGallery currentCategory={currentCategory}></ProjectsGallery> 
+    <About></About>
 <ContactMe></ContactMe>
-<Projects></Projects> 
  <Resume></Resume>
- <About></About>
  </main>
   </div>
 
