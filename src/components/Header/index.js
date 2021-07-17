@@ -7,13 +7,14 @@ function Header(props) {
     categories = [],
     setCurrentCategory,
     currentCategory,
+    setContactSelected
   } = props;
   
 
-  const handleClick = (item) => {
-    console.log(item);
-    return item;
-  };
+  // const handleClick = (item) => {
+  //   console.log(item);
+  //   return item;
+  // };
 
 
 
@@ -30,18 +31,35 @@ function Header(props) {
       <nav>
         <ul className="flex-row">
           <li className="mx=2">
-            <a data-testid ="#about" href="#about">
+            <a data-testid ="#about" href="#about" onClick={() =>setContactSelected(false)} >
               About Me
               </a>
           </li>
-            <li className={"mx-2"}>
-            <span onClick={() => handleClick('Contact')}>Contact</span>
+
+          <li className={"mx-2"}>
+            <span onClick={() => setContactSelected(false)}>Portfolio</span>
           </li>
+
+
+          <li className={"mx-2"}>
+            <span onClick={() => setContactSelected(true)}>Resume</span>
+          </li>
+
+            <li className={"mx-2"}>
+            <span onClick={() => setContactSelected(true)}>Contact</span>
+          </li>
+
+        
+
+
+
+
           {categories.map((category) => (
             <li
               className={`mx-1${
                 currentCategory.name === category.name
               }`}
+              
               key={category.name}
             >
               <span

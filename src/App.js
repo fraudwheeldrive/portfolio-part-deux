@@ -3,7 +3,7 @@ import Header from './components/Header'
 import About from './components/About'
 import ProjectsGallery from './components/ProjectsGallery'
 import ContactMe from './components/ContactMe'
-import Resume from './components/Resume'
+
 import './App.css';
 
 function App() {
@@ -18,7 +18,9 @@ function App() {
     },
   ]);
 
-  
+  const [contactSelected,setContactSelected] = useState(false);
+
+
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
 
@@ -27,14 +29,20 @@ function App() {
     <Header
     categories={categories}
     setCurrentCategory={setCurrentCategory}
-    currentCategory={currentCategory}>
+    currentCategory={currentCategory}
+    contactSelected={contactSelected}
+    setContactSelected={setContactSelected}>
     </Header>
     <main>
-    <ContactMe></ContactMe>
-    <ProjectsGallery currentCategory={currentCategory}></ProjectsGallery> 
+    {!contactSelected ? (
+  <>
+    <ProjectsGallery currentCategory={currentCategory}></ProjectsGallery>
     <About></About>
+  </>
+) : (
+    <ContactMe></ContactMe>
+  )}
 
- <Resume></Resume>
  </main>
   </div>
 
