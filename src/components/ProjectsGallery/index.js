@@ -3,7 +3,7 @@ import ProjectList from'../ProjectList';
 // import photo from "../../assets/images/hero-bg.jpg"
 
 
-function Projects(props) {
+function ProjectsGallery(props) {
   const { currentCategory } = props;
   
   return (
@@ -15,4 +15,4 @@ function Projects(props) {
   );
 }
   
-  export default Projects;
+  export default ProjectsGallery;

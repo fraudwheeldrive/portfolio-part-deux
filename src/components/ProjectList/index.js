@@ -28,7 +28,7 @@ description: " run buddy app",
     description: " express js",
 },
 {
-    name:" Regex Tutorial",
+    name:"Regex Tutorial",
     category:"portfolio",
     description: "Regex Tutorial: how to find an email ",
 },
@@ -47,7 +47,7 @@ const currentPortfolioItem = portfolioItems.filter((portfolioItem) => portfolioI
        <div className="flex-row">
         {currentPortfolioItem.map((image, i) => (
           <img
-            src={require(`../../assets/images/${category}/${i}.png`)}
+            src={require(`../../assets/site/${category}/${i}.PNG`)}
             alt={image.name}
             className="img-thumbnail mx-1"
             key={image.name}

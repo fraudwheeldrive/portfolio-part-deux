@@ -30,9 +30,10 @@ function App() {
     currentCategory={currentCategory}>
     </Header>
     <main>
+    <ContactMe></ContactMe>
     <ProjectsGallery currentCategory={currentCategory}></ProjectsGallery> 
     <About></About>
-<ContactMe></ContactMe>
+
  <Resume></Resume>
  </main>
   </div>

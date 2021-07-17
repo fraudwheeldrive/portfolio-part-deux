@@ -40,7 +40,7 @@ function Header(props) {
           {categories.map((category) => (
             <li
               className={`mx-1${
-                currentCategory.name === category.name && "navActive"
+                currentCategory.name === category.name
               }`}
               key={category.name}
             >
