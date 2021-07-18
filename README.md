@@ -1,4 +1,4 @@
-# My Portfolio (assignment 2)
+# Portfolio Part Deux
 
 ## Purpose
 Create a portfolio using React, CSS to buidl a Single Page Application to show case completed projects.
