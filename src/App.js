@@ -19,7 +19,7 @@ function App() {
   ]);
 
   const [contactSelected,setContactSelected] = useState(false);
-
+  // const [currentCategory, setCurrentCategory] = useState(true)
 
   const [currentCategory, setCurrentCategory] = useState(categories[0]);
 
@@ -36,13 +36,20 @@ function App() {
     <main>
     {!contactSelected ? (
   <>
-    <ProjectsGallery currentCategory={currentCategory}></ProjectsGallery>
+    
     <About></About>
   </>
 ) : (
-    <ContactMe></ContactMe>
+    <ContactMe></ContactMe>    
   )}
-
+  {!currentCategory ? (
+    <>
+    <ProjectsGallery currentCategory={currentCategory}></ProjectsGallery>
+    </>
+  ) : (
+    <ProjectsGallery currentCategory={currentCategory}></ProjectsGallery>
+  
+  )}
  </main>
   </div>
 
@@ -51,3 +58,21 @@ function App() {
 }
 
 export default App;
+
+
+
+
+
+
+
+
+
+// if(!contactSelected) {
+//   <>
+//     <About></About>
+//   </> 
+// } if (contactSelected) {
+//     <ContactForm></ContactForm>
+// } if (currentCategory) {
+//   <ProjectsGallery currentCategory={currentCategory}></ProjectsGallery>
+// }

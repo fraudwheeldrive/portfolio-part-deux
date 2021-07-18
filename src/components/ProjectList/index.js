@@ -16,16 +16,19 @@ description: " run buddy app",
     name:"Covid Now!",
     category:"portfolio",
     description: "group project 1",
+ 
 },
 {
     name:"Super-Hip!",
     category:"portfolio",
     description: "group project 2",
+   
 },
 {
     name:"E-Commerce Backend",
     category:"portfolio",
     description: " express js",
+   
 },
 {
     name:"Regex Tutorial",
@@ -57,5 +60,6 @@ const currentPortfolioItem = portfolioItems.filter((portfolioItem) => portfolioI
     </div>
   )
 }
+
 
 export default ProjectList;
