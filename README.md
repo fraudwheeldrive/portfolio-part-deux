@@ -1,3 +1,44 @@
+# My Portfolio (assignment 2)
+
+## Purpose
+Create a portfolio using React, CSS to buidl a Single Page Application to show case completed projects.
+This will be evolving webpage that is updated as new products are added and the webpage its self is 
+refined. 
+
+## Development
+current website is not in as complete a state as can be. Certain functionalities were missed from the template 
+and will be added in at a later date. The main factors causing the incomplete state were was time. The following 
+functionality need to be added, portfolio links and images rendering correctly, refined CSS styles.. . 
+
+![alt text](https://github.com/fraudwheeldrive/portfolio-part-deux/blob/main/src/assets/samcat/screenshot.PNG)
+
+
+
+
+##  Built with 
+Horiseon's webiste is built with 
+* React
+* Javascript 
+* JSX 
+* CSS
+* Bootstrap 
+
+## Website 
+https://fraudwheeldrive.github.io/portfolio-part-deux/#about
+## Github Repository 
+https://github.com/fraudwheeldrive/portfolio-part-deux
+
+## Contribution 
+
+
+
+### © 2021 Fraudwheeldrive, Inc.
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
